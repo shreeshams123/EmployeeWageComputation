@@ -4,8 +4,9 @@ class EmployeeWageComputation {
 
     public static void main(String[] args) {
     	
-    	        // Constants
+    	
     	        final int DAILY_HOURS = 8; // Hours worked per day
+    	        final int WORKING_DAYS_PER_MONTH = 20; // Working days per month
 
     	        // Create a Scanner object for user input
     	        Scanner scanner = new Scanner(System.in);
@@ -40,8 +41,12 @@ class EmployeeWageComputation {
     	        // Calculate daily wage
     	        double dailyWage = hourlyWage * DAILY_HOURS;
 
-    	        // Output the result
+    	        // Calculate monthly wage
+    	        double monthlyWage = dailyWage * WORKING_DAYS_PER_MONTH;
+
+    	        // Output the results
     	        System.out.println("Daily Wage for part-time employee: $" + dailyWage);
+    	        System.out.println("Monthly Wage for part-time employee: $" + monthlyWage);
 
     	        // Close the scanner
     	        scanner.close();

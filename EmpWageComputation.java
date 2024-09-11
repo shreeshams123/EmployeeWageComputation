@@ -1,19 +1,14 @@
+public class DailyEmployeeWage {
 
-class EmpWageComputation{
-	
-	    public static void main(String[] args) {
-	        // Create an instance of Random class
-	        Random random = new Random();
+    public static void main(String[] args) {
+        // Constants
+        final double HOURLY_WAGE = 20.0; // Hourly wage in dollars
+        final int DAILY_HOURS = 8;       // Hours worked per day
 
-	        // Simulate attendance
-	        boolean isPresent = random.nextBoolean(); // Randomly returns true or false
+        // Calculate daily wage
+        double dailyWage = HOURLY_WAGE * DAILY_HOURS;
 
-	        // Display attendance result
-	        if (isPresent) {
-	            System.out.println("The employee is present.");
-	        } else {
-	            System.out.println("The employee is absent.");
-	        }
-	    }
-	}
-
+        // Output the result
+        System.out.println("Daily Employee Wage: $" + dailyWage);
+    }
+}

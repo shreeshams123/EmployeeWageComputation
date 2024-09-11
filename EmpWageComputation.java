@@ -5,7 +5,7 @@ class EmployeeWageComputation {
     public static void main(String[] args) {
     	
     	
-    	    // Constants
+    	
     	    final static int WAGE_PER_HOUR = 20;
     	    final static int FULL_DAY_HOURS = 8;
     	    final static int PART_TIME_HOURS = 4;
@@ -18,8 +18,8 @@ class EmployeeWageComputation {
     	        int totalWorkingHours = 0;
     	        int totalWage = 0;
 
-    	        // List to store daily wages
-    	        ArrayList<Integer> dailyWages = new ArrayList<>();
+    	        // HashMap to store day and daily wages
+    	        HashMap<Integer, Integer> dailyWages = new HashMap<>();
 
     	        // Random object to simulate attendance
     	        Random random = new Random();
@@ -43,12 +43,12 @@ class EmployeeWageComputation {
     	            int dailyWage = dailyHours * WAGE_PER_HOUR;
     	            totalWage += dailyWage;
 
-    	            // Store daily wage in the list
-    	            dailyWages.add(dailyWage);
+    	            // Store day and daily wage in the HashMap
+    	            dailyWages.put(totalWorkingDays, dailyWage);
     	        }
 
-    	        // Output the daily wages and total wage
-    	        System.out.println("Daily Wages: " + dailyWages);
+    	        // Output the day, daily wages, and total wage
+    	        System.out.println("Day and Daily Wages: " + dailyWages);
     	        System.out.println("Total Monthly Wage: $" + totalWage);
     	    }
 
@@ -66,8 +66,7 @@ class EmployeeWageComputation {
     	                return 0;  // Employee is absent
     	        }
     	    }
-    	
-}
+    	}
 
 
     
